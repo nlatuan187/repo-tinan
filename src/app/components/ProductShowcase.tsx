@@ -7,17 +7,17 @@ export const ProductShowcase = () => {
 
     const products = {
         glass: [
-            { id: 1, name: "Thang Kính Panorama", img: "/assets/product-1.jpg" },
-            { id: 2, name: "Thang Kính Tròn Cao Cấp", img: "/assets/product-2.jpg" },
-            { id: 3, name: "Thang Kính Vuông Hiện Đại", img: "/assets/product-3.jpg" },
+            { id: 1, name: "Thang máy Kính (Panorama)", img: "/assets/product-1.jpg" },
+            { id: 2, name: "Thang máy Kính (Panorama)", img: "/assets/product-2.jpg" },
+            { id: 3, name: "Thang máy Kính (Panorama)", img: "/assets/product-3.jpg" },
         ],
         inox: [
-            { id: 4, name: "Thang Inox Gương Vàng", img: "/assets/product-4.jpg" },
-            { id: 5, name: "Thang Inox Luxury", img: "/assets/product-5.jpg" },
+            { id: 4, name: "Thang máy Inox gương", img: "/assets/product-4.jpg" },
+            { id: 5, name: "Thang máy Inox gương", img: "/assets/product-5.jpg" },
         ],
         wood: [
-            { id: 7, name: "Thang Ốp Gỗ Cổ Điển", img: "/assets/product-6.jpg" },
-            { id: 8, name: "Thang Giả Gỗ Sang Trọng", img: "/assets/product-7.jpg" },
+            { id: 7, name: "Thang máy Ốp gỗ / Giả gỗ", img: "/assets/product-6.jpg" },
+            { id: 8, name: "Thang máy Ốp gỗ / Giả gỗ", img: "/assets/product-7.jpg" },
         ]
     };
 
@@ -35,21 +35,21 @@ export const ProductShowcase = () => {
                         className={`px-8 py-3 rounded-full font-bold transition-all ${activeTab === 'glass' ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-secondary hover:bg-gray-100'
                             }`}
                     >
-                        Thang Máy Kính
+                        Thang máy Kính (Panorama)
                     </button>
                     <button
                         onClick={() => setActiveTab('inox')}
                         className={`px-8 py-3 rounded-full font-bold transition-all ${activeTab === 'inox' ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-secondary hover:bg-gray-100'
                             }`}
                     >
-                        Thang Luxury
+                        Thang máy Inox gương
                     </button>
                     <button
                         onClick={() => setActiveTab('wood')}
                         className={`px-8 py-3 rounded-full font-bold transition-all ${activeTab === 'wood' ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-secondary hover:bg-gray-100'
                             }`}
                     >
-                        Ốp Gỗ
+                        Thang máy Ốp gỗ / Giả gỗ
                     </button>
                 </div>
 
@@ -60,7 +60,7 @@ export const ProductShowcase = () => {
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 <img
                                     src={item.img}
-                                    alt={item.name}
+                                    alt="Thang máy Tín An"
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
@@ -69,11 +69,6 @@ export const ProductShowcase = () => {
                                         Xem chi tiết
                                     </button>
                                 </div>
-                            </div>
-                            <div className="p-6 text-center">
-                                <h3 className="font-bold text-lg text-secondary group-hover:text-primary transition-colors">
-                                    {item.name}
-                                </h3>
                             </div>
                         </div>
                     ))}
