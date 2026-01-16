@@ -9,19 +9,19 @@ export const ValueProposition = () => {
             id: 1,
             title: "Biểu tượng Đẳng cấp",
             description: "Điểm nhấn nội thất xa xỉ, gia tăng giá trị bất động sản.",
-            icon: "/assets/icon-class.png"
+            icon: "/assets/icon-class.jpeg"
         },
         {
             id: 2,
             title: "Tròn đạo Hiếu nghĩa",
             description: "Món quà sức khỏe cho cha mẹ già, sự an toàn cho con trẻ.",
-            icon: "/assets/icon-filial.png"
+            icon: "/assets/icon-filial.jpeg"
         },
         {
             id: 3,
             title: "Công nghệ May đo",
             description: "Thiết kế linh hoạt theo kích thước thực tế, không phá vỡ kết cấu.",
-            icon: "/assets/icon-tailor.png"
+            icon: "/assets/icon-tailor.jpeg"
         }
     ];
 
@@ -44,11 +44,11 @@ export const ValueProposition = () => {
                             key={item.id}
                             className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group"
                         >
-                            <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/25 transition-all duration-300">
                                 {/* Placeholder for Icon - using simple text/fallback for now if image missing */}
                                 <div className="relative w-10 h-10">
                                     {/* In real app use Next Image */}
-                                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain filter group-hover:brightness-0 group-hover:invert transition-all" />
+                                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                             </div>
                             <h3 className="text-xl font-bold mb-4 text-center text-secondary group-hover:text-primary transition-colors">
