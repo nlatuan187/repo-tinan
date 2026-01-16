@@ -44,15 +44,18 @@ export const Footer = () => {
         {/* MAP */}
         <div>
           <h3 className="font-bold text-lg mb-6 text-white uppercase">Bản đồ</h3>
-          <div className="bg-gray-800 h-48 rounded-lg overflow-hidden relative">
-            {/* Embed Google Maps Iframe would go here. */}
-            <div className="w-full h-full flex flex-col items-center justify-center text-gray-500 bg-gray-900">
-              <MapPin size={32} className="mb-2" />
-              <span className="text-xs">Google Maps Placeholder</span>
-            </div>
-            {/* Actual Iframe code:
-             <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
-             */}
+          <div className="bg-gray-800 h-64 rounded-lg overflow-hidden relative group">
+            <iframe
+              src="https://maps.google.com/maps?q=CÔNG%20TY%20TNHH%20THANG%20MÁY%20TÍN%20AN%20ELEVATOR%2C%20Nhà%20G1-G2%2C%20Đường%20số%202G%2C%20KĐT%20Cửa%20Tiền%2C%20Vinh%20Tân%2C%20Vinh%2C%20Nghệ%20An&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Location"
+              className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+            ></iframe>
           </div>
         </div>
       </div>
