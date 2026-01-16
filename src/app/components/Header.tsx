@@ -36,11 +36,9 @@ export const Header = () => {
                     <img
                         src="/assets/logo.jpg"
                         alt="Tín An Logo"
-                        className="h-12 w-auto object-contain"
+                        className="h-14 w-32"
                     />
-                    <span className={`font-bold text-xl tracking-widest uppercase ${isScrolled ? 'text-secondary' : 'text-white/90 drop-shadow-md'}`}>
-                        Tín An
-                    </span>
+
                 </Link>
 
                 {/* DESKTOP MENU */}
