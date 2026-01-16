@@ -1,0 +1,90 @@
+'use client';
+
+import React, { useState } from 'react';
+
+export const ProductShowcase = () => {
+    const [activeTab, setActiveTab] = useState<'glass' | 'inox' | 'wood'>('glass');
+
+    const products = {
+        glass: [
+            { id: 1, name: "Thang Kính Panorama", img: "/assets/product-1.jpg" },
+            { id: 2, name: "Thang Kính Tròn Cao Cấp", img: "/assets/product-2.jpg" },
+            { id: 3, name: "Thang Kính Vuông Hiện Đại", img: "/assets/product-3.jpg" },
+        ],
+        inox: [
+            { id: 4, name: "Thang Inox Gương Vàng", img: "/assets/product-4.jpg" },
+            { id: 5, name: "Thang Inox Luxury", img: "/assets/product-5.jpg" },
+        ],
+        wood: [
+            { id: 7, name: "Thang Ốp Gỗ Cổ Điển", img: "/assets/product-6.jpg" },
+            { id: 8, name: "Thang Giả Gỗ Sang Trọng", img: "/assets/product-7.jpg" },
+        ]
+    };
+
+    return (
+        <section id="products" className="py-24 bg-gray-50">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl md:text-4xl text-center font-bold mb-12 text-secondary">
+                    BỘ SƯU TẬP <span className="text-primary">ĐẲNG CẤP</span>
+                </h2>
+
+                {/* Tabs */}
+                <div className="flex justify-center gap-4 mb-12 flex-wrap">
+                    <button
+                        onClick={() => setActiveTab('glass')}
+                        className={`px-8 py-3 rounded-full font-bold transition-all ${activeTab === 'glass' ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-secondary hover:bg-gray-100'
+                            }`}
+                    >
+                        Thang Máy Kính
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('inox')}
+                        className={`px-8 py-3 rounded-full font-bold transition-all ${activeTab === 'inox' ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-secondary hover:bg-gray-100'
+                            }`}
+                    >
+                        Thang Luxury
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('wood')}
+                        className={`px-8 py-3 rounded-full font-bold transition-all ${activeTab === 'wood' ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-secondary hover:bg-gray-100'
+                            }`}
+                    >
+                        Ốp Gỗ
+                    </button>
+                </div>
+
+                {/* Product Grid - Adjusted to Flex for better centering of variable counts */}
+                <div className="flex flex-wrap justify-center gap-8">
+                    {products[activeTab].map((item) => (
+                        <div key={item.id} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 w-full md:w-[350px]">
+                            <div className="aspect-[3/4] overflow-hidden relative">
+                                <img
+                                    src={item.img}
+                                    alt={item.name}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
+                                <div className="absolute bottom-4 left-4 right-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                                    <button className="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg hover:bg-primary hover:text-white transition-colors">
+                                        Xem chi tiết
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="p-6 text-center">
+                                <h3 className="font-bold text-lg text-secondary group-hover:text-primary transition-colors">
+                                    {item.name}
+                                </h3>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="text-center mt-12">
+                    <button className="text-secondary font-semibold hover:text-primary transition-colors border-b-2 border-primary pb-1">
+                        Xem toàn bộ sản phẩm
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
+};
