@@ -24,7 +24,7 @@ export const HeroSection = () => {
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-sans leading-tight tracking-tight mb-6">
                         THANG MÁY TÍN AN<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-primary to-yellow-600">
-                            NÂNG TẦM DI SẢN
+                            NÂNG TẦM DI SẢN NGÔI NHÀ VIỆT
                         </span>
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-200 font-light max-w-3xl mx-auto mb-10 leading-relaxed">
