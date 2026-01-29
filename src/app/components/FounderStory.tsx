@@ -21,7 +21,7 @@ export const FounderStory = () => {
 
                         <div className="absolute bottom-10 -right-4 bg-white p-6 shadow-xl rounded-xl z-20 max-w-xs hidden lg:block">
                             <p className="text-primary font-bold text-lg">20 Năm</p>
-                            <p className="text-gray-600 text-sm">Kinh nghiệm trong ngành thang máy & kiến trúc</p>
+                            <p className="text-gray-600 text-sm"> trong ngành xây dựngc</p>
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@ export const FounderStory = () => {
                                 Từ khâu khảo sát để không phá vỡ kết cấu cũ, đến từng đường keo mũi chỉ khi lắp đặt.
                             </p>
                             <p className="font-bold text-secondary italic">
-                                — Founder Nguyễn Lưu Tình
+                                — Nhà sáng lập Nguyễn Lưu Tình
                             </p>
                         </div>
 
