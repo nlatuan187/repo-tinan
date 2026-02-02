@@ -6,15 +6,15 @@ export const SocialProof = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const projects = [
-        { img: "/assets/demo-1.jpg", name: "Biệt thự Vinh Tân" },
-        { img: "/assets/demo-2.jpg", name: "Nhà phố Hưng Dũng" },
-        { img: "/assets/demo-3.jpg", name: "Biệt thự Diễn Châu" },
-        { img: "/assets/demo-4.jpg", name: "Villa Cửa Lò" },
-        { img: "/assets/demo-5.jpg", name: "Nhà phố TP Vinh" },
-        { img: "/assets/demo-6.jpg", name: "Biệt thự Hà Tĩnh" },
-        { img: "/assets/demo-7.jpg", name: "Villa Nghi Lộc" },
-        { img: "/assets/demo-8.jpg", name: "Nhà phố Quỳnh Lưu" },
-        { img: "/assets/demo-9.jpg", name: "Biệt thự Thanh Hóa" },
+        { img: "/assets/demo-0.jpg", name: "Biệt thự Vinh Tân" },
+        { img: "/assets/demo-1.jpg", name: "Nhà phố Hưng Dũng" },
+        { img: "/assets/demo-2.jpg", name: "Biệt thự Diễn Châu" },
+        { img: "/assets/demo-3.jpg", name: "Villa Cửa Lò" },
+        { img: "/assets/demo-4.jpg", name: "Nhà phố TP Vinh" },
+        { img: "/assets/demo-5.jpg", name: "Biệt thự Hà Tĩnh" },
+        { img: "/assets/demo-6.jpg", name: "Villa Nghi Lộc" },
+        { img: "/assets/demo-7.jpg", name: "Nhà phố Quỳnh Lưu" },
+        { img: "/assets/demo-8.jpg", name: "Biệt thự Thanh Hóa" },
     ];
 
     return (
