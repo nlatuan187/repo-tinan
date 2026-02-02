@@ -53,10 +53,10 @@ export const ProductShowcase = () => {
                     </button>
                 </div>
 
-                {/* Product Grid - Adjusted to Flex for better centering of variable counts */}
-                <div className="flex flex-wrap justify-center gap-8">
+                {/* Product Grid - Adjusted for mobile horizontal scroll */}
+                <div className="flex md:flex-wrap overflow-x-auto md:overflow-visible gap-6 pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
                     {products[activeTab].map((item) => (
-                        <div key={item.id} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 w-full md:w-[350px]">
+                        <div key={item.id} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 min-w-[280px] w-[85vw] md:w-[350px] snap-center flex-shrink-0">
                             <div className="aspect-[3/4] overflow-hidden relative">
                                 <img
                                     src={item.img}
@@ -72,12 +72,6 @@ export const ProductShowcase = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div className="text-center mt-12">
-                    <button className="text-secondary font-semibold hover:text-primary transition-colors border-b-2 border-primary pb-1">
-                        Xem toàn bộ sản phẩm
-                    </button>
                 </div>
             </div>
         </section>

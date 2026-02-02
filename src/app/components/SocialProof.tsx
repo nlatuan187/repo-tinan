@@ -99,9 +99,6 @@ export const SocialProof = () => {
                                 <p className="text-gray-600 text-sm">Khách hài lòng</p>
                             </div>
                         </div>
-                        <button className="px-8 py-4 bg-primary text-white font-bold rounded-full shadow-lg hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-300">
-                            Xem thêm công trình
-                        </button>
                     </div>
                 </div>
             </section>
