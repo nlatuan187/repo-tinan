@@ -12,7 +12,7 @@ export const HeroSection = () => {
                 <img
                     src="/assets/hero-bg.jpg"
                     alt="Thang máy biêt thự Tín An Luxury"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[25%_center] md:object-[30%_center]"
                 />
             </div>
 
