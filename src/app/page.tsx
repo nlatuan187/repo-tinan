@@ -15,11 +15,11 @@ export default function Home() {
         <main className="min-h-screen bg-white">
             <Header />
             <HeroSection />
+            <SocialProof />
             <ValueProposition />
             <FounderStory />
             <ProductShowcase />
             <ServicePromise />
-            <SocialProof />
             <Footer />
             <FloatingActions />
         </main>

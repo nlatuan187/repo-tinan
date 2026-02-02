@@ -21,7 +21,7 @@ export const FounderStory = () => {
 
                         <div className="absolute bottom-10 -right-4 bg-white p-6 shadow-xl rounded-xl z-20 max-w-xs hidden lg:block">
                             <p className="text-primary font-bold text-lg">20 Năm</p>
-                            <p className="text-gray-600 text-sm"> trong ngành xây dựngc</p>
+                            <p className="text-gray-600 text-sm"> trong ngành xây dựng</p>
                         </div>
                     </div>
 
