@@ -31,6 +31,33 @@ export const SocialProof = () => {
         }
     };
 
+    // Touch/Swipe handling
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            handleNext();
+        } else if (isRightSwipe) {
+            handlePrev();
+        }
+    };
+
     // Keyboard navigation
     React.useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -137,7 +164,7 @@ export const SocialProof = () => {
             {/* Lightbox Modal */}
             {selectedIndex !== null && (
                 <div
-                    className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center backdrop-blur-sm"
+                    className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center backdrop-blur-sm touch-none"
                     onClick={() => setSelectedIndex(null)}
                 >
                     {/* Close button */}
@@ -160,15 +187,19 @@ export const SocialProof = () => {
                         </svg>
                     </button>
 
-                    {/* Image Container */}
+                    {/* Image Container with Swipe Support */}
                     <div
                         className="relative w-full h-full flex items-center justify-center p-4"
                         onClick={(e) => e.stopPropagation()}
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
                     >
                         <img
                             src={projects[selectedIndex].img}
                             alt={projects[selectedIndex].name}
-                            className="max-w-full max-h-[90vh] object-contain shadow-2xl animate-fade-in"
+                            className="max-w-full max-h-[90vh] object-contain shadow-2xl animate-fade-in select-none"
+                            draggable={false}
                         />
 
                         {/* Caption */}
@@ -176,6 +207,8 @@ export const SocialProof = () => {
                             <span className="inline-block px-4 py-2 bg-black/50 text-white rounded-full text-sm backdrop-blur-md">
                                 {projects[selectedIndex].name} ({selectedIndex + 1}/{projects.length})
                             </span>
+                            {/* Mobile Swipe Hint */}
+                            <p className="text-white/40 text-xs mt-2 md:hidden">Vuốt trái/phải để chuyển ảnh</p>
                         </div>
                     </div>
 
@@ -188,10 +221,6 @@ export const SocialProof = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
-
-                    {/* Mobile Tap Zones */}
-                    <div className="absolute inset-y-0 left-0 w-1/3 z-40 md:hidden" onClick={handlePrev} />
-                    <div className="absolute inset-y-0 right-0 w-1/3 z-40 md:hidden" onClick={handleNext} />
                 </div>
             )}
         </>
