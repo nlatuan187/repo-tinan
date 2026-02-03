@@ -19,7 +19,7 @@ export const HeroSection = () => {
             <div className="relative z-20 container mx-auto px-4 text-center mt-16">
                 <div className="mb-6 animate-fade-in-up">
                     <span className="inline-block py-1 px-3 border border-primary/50 rounded-full bg-black/30 backdrop-blur-sm text-primary-dark text-sm font-semibold tracking-widest uppercase mb-4">
-                        Engineering & Luxury
+                        CÔNG NGHỆ CHÂU ÂU - ĐẲNG CẤP TINH HOA
                     </span>
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-sans leading-tight tracking-tight mb-6">
                         THANG MÁY TÍN AN<br />

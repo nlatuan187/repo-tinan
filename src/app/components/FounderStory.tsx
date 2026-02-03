@@ -46,12 +46,7 @@ export const FounderStory = () => {
                             </p>
                         </div>
 
-                        <div className="mt-10">
-                            <button className="text-primary font-bold hover:text-primary-dark transition-colors flex items-center gap-2 group">
-                                Xem hồ sơ năng lực
-                                <span className="group-hover:translate-x-1 transition-transform">→</span>
-                            </button>
-                        </div>
+
                     </div>
                 </div>
             </div>
