@@ -34,20 +34,13 @@ export const HeroSection = () => {
 
                 <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                     <button
-                        onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+                        onClick={() => window.open('tel:0852145968')}
                         className="group relative px-8 py-4 bg-primary overflow-hidden rounded-full shadow-lg hover:shadow-primary/50 transition-all duration-300 transform hover:-translate-y-1"
                     >
                         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:animate-shine" />
                         <span className="relative font-bold text-white tracking-wide uppercase">
                             Tư vấn khảo sát miễn phí
                         </span>
-                    </button>
-
-                    <button
-                        onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-8 py-4 border border-white/40 hover:bg-white hover:text-secondary hover:border-white rounded-full font-bold uppercase tracking-wide transition-all duration-300"
-                    >
-                        Xem bộ sưu tập
                     </button>
                 </div>
             </div>
